@@ -1,26 +1,26 @@
 # Sistema de enquetes em realtime
 
 ## 📃 Descrição
-Esta é um projeto Back-end que cria um API em Node.js ao qual um usuário gerenciar um sistema enquetes através de requisições HTTP e armazenando-os em um banco de dados.
+Este é um projeto Back-end que cria um API em Node.js ao qual um usuário gerencia um sistema de enquetes através de requisições HTTP e armazenando-os em um banco de dados relacional.
 
 ## Sistema de rotas
 ### POST/polls
 O usuário poderá criar uma nova enquete através de uma requisição POST. A API irá salvar esta nova enquete dentro de um banco de dados Postgres.
 
 ### GET/polls/:id
-O usuário poderá obter detalhes de uma única enquete através de uma rota GET recebendo o id da enquete ao qual ele quer receber os dados. A API irá buscar estes dados no banco de dados.
+O usuário poderá obter detalhes de uma única enquete através de uma rota GET recebendo o id da enquete ao qual ele quer receber os dados. A API irá buscar estes dados no banco de dados e retornar esta enquete específica para o usuário.
 
 ### POST/polls/:id/votes
 O usuário também poderá criar um voto para selecionar qual opção da enquete ele está votando. A API irá salvar este voto no banco de dados.
 
 ### WebSocket
-Através de um protocolo `ws`, será criada uma comunicação assíncrona e em tempo real entre o usuário e o servidor . A API vai ficar observando toda vez que houver um novo voto na enquete, ela vai avisar a requisição WebSocket que houve um novo voto que será informado ao usuário em tempo real.
+Através de um protocolo `ws`, será criada uma comunicação assíncrona e em tempo real entre o usuário e o servidor. A API vai ficar observando toda vez que houver um novo voto na enquete, ela vai avisar a requisição WebSocket que houve um novo voto que será informado ao usuário em tempo real.
 
 
 ## 🛠 Tecnologias
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Fastify](https://img.shields.io/badge/fastify-%23000000.svg?style=for-the-badge&logo=fastify&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 
-## ⚙ Recursos
+## 🧰 Recursos
 `@fastify/websocket` é um plugin que permite adicionar suporte para comunicação bidirecional em tempo real utilizando WebSockets em aplicativos desenvolvidos com Fastify. Com ele é possível monitorar os resultados de um enquete.
 
 `@fastify/cookie` é outro plugin que fornece uma maneira fácil de manipular cookies em aplicativos Fastify.
@@ -74,5 +74,5 @@ npm run dev
 Assim que o projeto estiver rodando, acesse o seu `http://localhost:3333`
 
 ## 🙋‍♂️ Colaboradores
-Este projeto foi desenvolvido por mim Wilker Guimarães, através do evento NLW-Expert da Rockeseat na trilha de Node.js. Com o objetivo de aplicar os conhecimentos de Node.js para desenvolver um projeto Back-end utilizando os conceitos mais modernos de desenvolvimento e utilização de ferramentas populares.
+Este projeto foi desenvolvido por mim Wilker Guimarães, através do evento NLW-Expert da Rockeseat na trilha de Node.js. Com o objetivo de desenvolver e aplicar os meus conhecimentos de Node.js para desenvolver um projeto Back-end abordando os conceitos mais modernos de desenvolvimento e empregando o uso de ferramentas populares.
 
